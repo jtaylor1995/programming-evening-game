@@ -8,13 +8,11 @@ var Game = {
   preload : function() {
     // Here we load all the needed resources for the level.
     // In our case, that's just two squares - one for the snake body and one for the apple.
-    game.load.image('snake', './assets/images/snake.png');
+    game.load.image('snake', './assets/images/Dude_Monster.png');
     game.load.image('apple', './assets/images/apple.png');
   },
 
   create : function() {
-    console.log("INSIDE CREATE GAME FILE")
-
     // By setting up global variables in the create function, we initialise them on game start.
     // We need them to be globally available so that the update function can alter them.
 
@@ -35,9 +33,7 @@ var Game = {
 
     // Generate the initial snake stack. Our snake will be 10 elements long.
     // Beginning at X=150 Y=150 and increasing the X on every iteration.
-    for(var i = 0; i < 10; i++){
-      snake[i] = game.add.sprite(150+i*squareSize, 150, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
-    }
+      snake[0] = game.add.sprite(150+0*squareSize, 150, 'snake');
 
     // Genereate the first apple.
     this.generateApple();
