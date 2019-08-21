@@ -161,6 +161,15 @@ var Game = {
       // }
     }
 
+    var min=1;
+    var max=1000;
+    var random =
+      Math.floor(Math.random() * (+max - +min)) + +min;
+
+    if (random === 42) {
+      this.generateApple()
+    }
+
   },
 
   generateApple: function(){
