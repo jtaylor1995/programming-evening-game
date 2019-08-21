@@ -31,9 +31,7 @@ var Game = {
 
     game.stage.backgroundColor = '#061f27';
 
-    // Generate the initial snake stack. Our snake will be 10 elements long.
-    // Beginning at X=150 Y=150 and increasing the X on every iteration.
-      snake[0] = game.add.sprite(150+0*squareSize, 150, 'snake');
+    snake[0] = game.add.sprite(150+0*squareSize, 150, 'snake');
 
     // Genereate the first apple.
     this.generateApple();
@@ -139,6 +137,8 @@ var Game = {
 
       snake.push(lastCell);
       firstCell = lastCell;
+
+      apple = game.add.sprite(lastCell.x, lastCell.y, 'apple');
       // const TOP = 1
       // const BOTTOM = 449
       // const RIGHT = 599
