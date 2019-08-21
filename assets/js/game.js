@@ -10,6 +10,7 @@ var Game = {
     // In our case, that's just two squares - one for the snake body and one for the apple.
     game.load.image('snake', './assets/images/Dude_Monster.png');
     game.load.image('apple', './assets/images/apple.png');
+    game.load.image('green-tile', './assets/images/green-tile.png');
   },
 
   create : function() {
@@ -138,7 +139,7 @@ var Game = {
       snake.push(lastCell);
       firstCell = lastCell;
 
-      apple = game.add.sprite(lastCell.x, lastCell.y, 'apple');
+      apple = game.add.sprite(lastCell.x, lastCell.y, 'green-tile');
       // const TOP = 1
       // const BOTTOM = 449
       // const RIGHT = 599
